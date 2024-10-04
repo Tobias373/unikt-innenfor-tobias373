@@ -1,24 +1,24 @@
 body {
-    background-color: lightblue;
-  }
+  background-color: lightblue;
+}
 /* Dette er en kommentar i CSS */
-  h1 {
-    color: navy;
-    margin-left: 20px;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-  }
-  .grid-item { 
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 a.ex1:hover, a.ex1:active {color: red;}
 a.ex2:hover, a.ex2:active {font-size: 125%;}
 a.ex3:hover, a.ex3:active {background: red;}
@@ -26,22 +26,25 @@ a.ex4:hover, a.ex4:active {font-family: monospace;}
 a.ex5:visited, a.ex5:link {text-decoration: none;}
 a.ex5:hover, a.ex5:active {text-decoration: underline;}
 body {
-  background-color: rgb(236, 231, 231);
+background-color: rgb(236, 231, 231);
 }
+
 
 @media screen and (min-width: 500px) {
-  body {
-    background-color: lightgreen;
-  }
+body {
+  background-color: lightgreen;
+}
 }
 
+
 @media screen and (min-width: 900px) {
-  body {
-    background-color: lavender;
-  }
+body {
+  background-color: lavender;
+}
 }
 @media screen and (min-width: 1100px) {
-  body {
-    background-color: rgb(11, 220, 192);
-  }
+body {
+  background-color: rgb(11, 220, 192);
 }
+}
+
