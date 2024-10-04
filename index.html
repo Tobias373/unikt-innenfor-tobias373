@@ -102,14 +102,19 @@
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
 .item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.item5 { grid-area: footer1; } 
+.item6 { grid-area: footer2; } 
+.item7 { grid-area: footer3; } 
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
     'menu main main main right right'
-    'menu footer footer footer footer footer';
+    'menu footer1 footer1 footer1 footer1 footer1'
+    'menu footer2 footer2 footer2 footer2 footer2'
+    'menu footer3 footer3 footer3 footer3 footer3';
+
   gap: 10px;
   padding: 10px;
   /* Removed the background color to make it invisible */
@@ -121,16 +126,18 @@
   background-color: transparent;
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 
    </style>
 <div class="grid-container">
  <div class="item1"> <h4> Velkommen til nettsiden min! </h4> </div>
- <div class="item2">Menu</div>
- <div class="item3">Main</div> 
- <div class="item4">Right</div>
- <div class="item5">Footer</div>
+ <div class="item2"></div>
+ <div class="item3"></div> 
+ <div class="item4"></div>
+ <div class="item5"><p>Jeg heter Tobias Helgøy og er elev på Amalie Skram VGS. Gjennom min utdanning har jeg fått muligheten til å utvikle ferdigheter innen både teknologi og kreativt arbeid.</p></div>
+ <div class="item6"><h5 style="margin-bottom: 5px;">Hva vi lærer på skolen</h5></div>
+ <div class="item7"></div>
 </div>
 </body>
 </html>
