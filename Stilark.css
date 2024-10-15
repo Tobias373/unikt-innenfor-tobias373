@@ -18,6 +18,7 @@ h1 {
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  
 }
 a.ex1:hover, a.ex1:active {color: red;}
 a.ex2:hover, a.ex2:active {font-size: 125%;}
