@@ -15,7 +15,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header Section */
 header {
     background-color: #2c3e50;
     color: white;
@@ -45,14 +44,12 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-/* Hero Section */
 .hero {
-    background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
+    background: url('') no-repeat center center/cover;
     padding: 6rem 0;
     color: white;
     text-align: center;
 }
-
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -62,10 +59,17 @@ nav ul li a {
     font-size: 1.5rem;
 }
 
-/* Destinations Section */
 .destinations {
     padding: 4rem 0;
     background-color: #f4f4f4;
+}
+
+#destinations {
+    background-image: url(''); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0; 
 }
 
 .destinations h2 {
@@ -92,7 +96,6 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* About Section */
 .about {
     padding: 4rem 0;
 }
@@ -103,7 +106,6 @@ nav ul li a {
     margin-bottom: 2rem;
 }
 
-/* Contact Section */
 .contact {
     padding: 4rem 0;
 }
@@ -144,7 +146,6 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* Footer Section */
 footer {
     background-color: #2c3e50;
     color: white;
@@ -152,16 +153,17 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
 }
+
 @media screen and (min-width: 400px) {
     body {
-      background-color: lightgreen;
+      background-color: rgb(235, 239, 240);
     }
-  }
-  /* Image hover effect */
+}
+
 .destination img {
-    transition: filter 0.3s ease; /* Smooth transition effect */
+    transition: filter 0.3s ease;
 }
 
 .destination img:hover {
-    filter: grayscale(80%); /* Make the image 50% grey on hover */
+    filter: grayscale(80%); 
 }
