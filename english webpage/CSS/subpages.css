@@ -50,6 +50,11 @@ nav ul li a {
     padding: 10px;
     text-align: center;
 }
+.grid-item img {
+    width: 100%; /* Image takes full width of the grid-item */
+    height: 500px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images fit without distortion, cropped if necessary */
+}
 footer {
     text-align: center;
     margin-top: 20px;
