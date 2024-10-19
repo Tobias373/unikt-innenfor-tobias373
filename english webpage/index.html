@@ -15,6 +15,17 @@
             color: white;
             text-align: center;
         }
+        .dining-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .dining {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 
     <header>
@@ -23,8 +34,11 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#about">About Texas</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About Texas</a></li>
+                <li><a href="#funfacts">Fun Facts</a></li> 
+                <li><a href="#dining" class="button">Places to Dine</a></li>
+                <li><a href="./subpages/sources.html" class="button">Sources</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,15 +54,10 @@
     <section id="destinations" class="destinations">
         <div class="container">
             <h2>Top Destinations in Texas</h2>
-
             <p style="font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 20px;">
                 Click the images below to learn more about each destination!
             </p>
-            
-
             <div class="destination-grid">
-    
-                <!-- Austin -->
                 <div class="destination">
                     <a href="./subpages/Austin.html">
                         <img src="./images/Main_Page/austin.jpg" alt="Austin" style="width: 300px; height: 225px;">
@@ -58,7 +67,6 @@
                     <p>Experience live music, outdoor activities, and a unique culture in the capital city.</p>
                 </div>
     
-                <!-- Houston -->
                 <div class="destination">
                     <a href="./subpages/Houston.html">
                         <img src="./images/Main_Page/houston.jpg" alt="Houston" style="width: 300px; height: 225px;">
@@ -68,7 +76,6 @@
                     <p>Discover the energy and space capital with a mix of art, science, and cultural experiences.</p>
                 </div>
     
-                <!-- San Antonio -->
                 <div class="destination">
                     <a href="./subpages/San_Antonio.html">
                         <img src="./images/Main_Page/san_antonio.jpg" alt="San Antonio" style="width: 300px; height: 225px;">
@@ -78,7 +85,6 @@
                     <p>Visit the historic Alamo and stroll along the charming River Walk.</p>
                 </div>
     
-                <!-- Big Bend National Park -->
                 <div class="destination">
                     <a href="./subpages/Big_Bend_National_Park.html">
                         <img src="./images/Main_Page/big_bend_national_park.jpg" alt="Big Bend National Park" style="width: 300px; height: 225px;">
@@ -88,7 +94,6 @@
                     <p>Explore the majestic mountains, desert landscapes, and outdoor adventures in this natural treasure.</p>
                 </div>
     
-                <!-- Dallas -->
                 <div class="destination">
                     <a href="./subpages/Dallas.html">
                         <img src="./images/Main_Page/dallas.jpg" alt="Dallas" style="width: 300px; height: 225px;">
@@ -98,7 +103,6 @@
                     <p>Explore this modern metropolis known for its cultural attractions, shopping, and vibrant nightlife.</p>
                 </div>
     
-                <!-- Galveston -->
                 <div class="destination">
                     <a href="./subpages/Galveston.html">
                         <img src="./images/Main_Page/galveston.jpg" alt="Galveston" style="width: 300px; height: 225px;">
@@ -107,23 +111,87 @@
                     <h3>Galveston</h3>
                     <p>Relax on beautiful beaches or explore the historic sites of this charming Gulf Coast city.</p>
                 </div>
-    
             </div>
         </div>
     </section>
-    
-    
 
-    <section id="about" class="about">
+    <section id="dining" class="dining">
         <div class="container">
-            <h2>About Texas</h2>
-            <p>Texas is known for its larger-than-life attitude, diverse geography, and rich history. From the bustling cities of Dallas and Houston to the wide-open spaces of West Texas, there is something for everyone to explore. Whether you're into food, history, or nature, Texas offers unforgettable experiences.</p>
+            <h2>Places to Dine in Texas</h2>
+            <div class="dining-grid">
+                <div class="dining">
+                    <h3>Franklin Barbecue</h3>
+                    <img src="./images/Main_Page/Franklin_BBQ.jpg" alt="Franklin BBQ" style="width: 300px; height: 225px;">
+                    <p style="font-size: 15px; margin-bottom: 10px;">Image courtesy of <a href="https://franklinbarbecue.com">Franklin Barbecue</a>.</p>
+                    <p style="font-size: 15px; margin-bottom: 10px;"> Delicious cuisine with a focus on local ingredients. Perfect for a family meal or special occasion. Franklin Barbecue is open on tuesday - sunday from 11am until their sold out (usually 2 or 3 pm)</p>
+                    <p style="font-size: 15px;"> Fraklin barbecue is locted in Austin at: 900 E. 11th, Austin, TX 78702</p>
+
+                </div>
+                
+                <div class="dining">
+                    <h3>Pappadeaux</h3>
+                    <img src="./images/Main_Page/PappadeauX.jpg" alt="Pappadeaux" style="width: 300px; height: 225px;">
+                    <p style="font-size: 15px; margin-bottom: 10px;">Image courtesy of <a href="https://pappadeaux.com">Pappadeaux's Seafood Kitchen</a>.</p>
+                    <p style="font-size: 15px;">A cozy spot with a diverse menu, offering both traditional and modern dishes. Pappadeaux has many diffrent locations which you can check out here: <a href="https://pappadeaux.com/locations/"> locations</a>. Each location has its own opening hours which can be seen on the locations specific page</p>
+                    
+                    
+                    
+                </div>
+                
+                <div class="dining">
+                    <h3>The Rustic</h3>
+                    <img src="./images/Main_Page/The_rustic.png" alt="The Rustic" style="width: 300px; height: 225px;">
+                    <p style="font-size: 15px; margin-bottom: 10px;">Image courtesy of <a href="https://therustic.com/">The Rustic</a>.</p>
+                    <p style="font-size: 15px;">Experience authentic Texas BBQ and southern hospitality in a charming setting. The Rustic has 3 diffrent locations, these 3 location all have pretty similar opening times. To see more information about both opening times and locations click <a href="https://therustic.com/">here</a>.</p>
+                </div>
+            </div>
         </div>
     </section>
-
-    <footer>
+    <section id="about" class="about">
         <div class="container">
+            <h2>Fun facts about Texas</h2>
+            <section id="funfacts" class="funfacts"></section>
+            <ol>
+                <li style="font-size: 15px; margin-bottom: 10px;">Texas is the second largest U.S. state in both area and population.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">The state was an independent nation from 1836 to 1845 before joining the U.S.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">Dr Pepper was invented in Waco, Texas, in 1885.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">Texas has its own power grid, separate from the other U.S. states.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">The Texas state capitol in Austin is taller than the U.S. Capitol in Washington, D.C.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">The King Ranch in Texas is larger than the entire state of Rhode Island.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">The first frozen margarita machine was invented in Dallas in 1971.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">More species of bats live in Texas than in any other U.S. state.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">Texas is known as the "Lone Star State" as a reminder of its former status as an independent republic.</li>
+                <li style="font-size: 15px; margin-bottom: 10px;">The state flower is the Bluebonnet, and it's illegal to pick one from public property!</li>
+            </ol>
         </div>
-    </footer>
+    </section>
+   
+    <section id="state-symbols" class="state-symbols">
+        <div class="container">
+            <h2>State Flower, Flag, and Motto of Texas</h2>
+    
+            <div class="dining">
+                <h3>State Flower: Bluebonnet</h3>
+                <img src="./images/Main_Page/bluebonnet.jpg" alt="Bluebonnet" style="width: 500px; height: 350px;">
+                <p style="font-size: 15px;">Photo by <a href="https://unsplash.com/@davidholifield">David Holifield</a> on <a href="https://unsplash.com">Unsplash</a></p>
+                <p style="font-size: 15px; margin-bottom: 10px;">The Bluebonnet is the official state flower of Texas, known for its vibrant blue hue and blooming in spring across the Texas landscape.</p>
+            </div>
+    
+            <div class="dining">
+                <h3>State Flag: Lone Star Flag</h3>
+                <img src="./images/Main_Page/Texas_Flag.jpg" alt="Texas Flag" style="width: 500px; height: 350px;">
+                <p style="font-size: 15px;">Photo by <a href="https://unsplash.com/@lucasbeckphotography">Lucas Beck</a> on <a href="https://unsplash.com">Unsplash</a></p>
+                <p style="font-size: 15px; margin-bottom: 10px;">The Texas flag, commonly referred to as the "Lone Star Flag," is a symbol of Texas' fight for independence from Mexico and represents the state's pride and unity.</p>
+            </div>
+    
+            <div class="dining">
+                <h3>State Motto: Friendship</h3>
+                <p style="font-size: 15px; margin-bottom: 10px;">The state motto of Texas is "Friendship, this state motto comes from the caddo word "taysha" meaning friend or ally which got misspelled and mispronounced eventually becoming the word texas </p>
+            </div>
+    
+        </div>
+    </section>
+    
+
 </body>
 </html>
