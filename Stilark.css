@@ -1,50 +1,50 @@
+/* Generelle stilendringer */
 body {
-  background-color: lightblue;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  background-color: #f9f9f9;
 }
-/* Dette er en kommentar i CSS */
-h1 {
-  color: navy;
-  margin-left: 20px;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
+
+/* Grid-oppsett */
+header {
+  background-color: #073255;
+  color: white;
   text-align: center;
-  
-}
-a.ex1:hover, a.ex1:active {color: red;}
-a.ex2:hover, a.ex2:active {font-size: 125%;}
-a.ex3:hover, a.ex3:active {background: red;}
-a.ex4:hover, a.ex4:active {font-family: monospace;}
-a.ex5:visited, a.ex5:link {text-decoration: none;}
-a.ex5:hover, a.ex5:active {text-decoration: underline;}
-body {
-background-color: rgb(236, 231, 231);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
 }
 
+.section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-@media screen and (min-width: 500px) {
-body {
-  background-color: lightgreen;
-}
+/* Stiler for seksjonene */
+.about, .school, .skills, .hobbies {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  margin: 20px;
+}
 
-@media screen and (min-width: 900px) {
-body {
-  background-color: lavender;
-}
-}
-@media screen and (min-width: 1100px) {
-body {
-  background-color: rgb(11, 220, 192);
-}
+/* Responsiv layout */
+@media screen and (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 }
