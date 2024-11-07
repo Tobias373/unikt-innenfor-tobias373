@@ -75,7 +75,7 @@ body {
 
 /* Navbar stil */
 .navbar {
-  background-color: #333333; /* endrer farge på navbaren*/
+  background-color: #333333; /* bestemmer farge på navbaren*/
   padding: 15px;
   margin: 20px;
   border-radius: 8px;
@@ -104,3 +104,22 @@ body {
   transform: scale(1.1); /* Øk størrelsen litt ved hover */
 }
 
+.image-container {
+  display: grid;
+  place-items: center; /* Sentrerer innholdet både horisontalt og vertikalt */
+  height: 100%; 
+}
+
+/* Responsiv layout for små skjermer */
+@media screen and (max-width: 900px) {
+  .navbar ul {
+    flex-direction: column; /* Endrer retning fra horisontal til vertikal */
+    align-items: center; /* Sentraliserer elementene horisontalt */
+    gap: 10px; /* Reduserer avstanden mellom elementene */
+  }
+
+  .navbar a {
+    padding: 10px 20px; /* Justerer padding for bedre plassutnyttelse */
+    font-size: 1.2rem; /* Øker skriftstørrelsen for bedre lesbarhet */
+  }
+}
