@@ -31,7 +31,7 @@ header {
 /* Footer */
 footer {
   text-align: center; /* Sentraliserer tekst i footer */
-  padding: 10px; /* Indre margin for luft */
+  padding: 10px; 
   border-radius: 8px;
   margin: 20px;
 }
