@@ -21,13 +21,6 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Legger til en skygge for dybdeeffekt */
 }
 
-/* Stiler for seksjonene */
-.about, .school, .skills, .hobbies {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 10px; /* Mellomrom mellom rader */
-}
-
 /* Footer */
 footer {
   text-align: center; /* Sentraliserer tekst i footer */
@@ -51,10 +44,6 @@ footer {
 
 body {
   padding: 20px; /* Ekstra padding rundt hele dokumentet */
-}
-
-.section + .section {
-  margin-top: 80px; /* Ekstra mellomrom mellom seksjoner */
 }
 
 /* Navbar stil */
