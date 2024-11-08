@@ -73,7 +73,7 @@ body {
 
 /* Hover-effekt for navbar-lenker */
 .navbar a:hover {
-  background-color: #4da8da; /* Endrer farge ved hover */
+  background-color: #4da8da; /* bestemmer hvilken farge lenken vil bli ved hover effekt */
   transform: scale(1.1); /* Forstørrer litt ved hover */
 }
 
