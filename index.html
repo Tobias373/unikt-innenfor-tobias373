@@ -27,7 +27,6 @@
       <li><a href="./english_webpage/index.html">English Page</a></li>
     </ul>
   </nav>
-  
 
 <header>
   <!-- Hovedtittel og introduksjon til nettsiden -->
@@ -40,7 +39,7 @@
 <!-- Seksjon om meg, inkludert et bilde og en kort beskrivelse -->
  <section id="om">
 <section class="section om">
-  <h4 style="text-align: center;">Om Meg</h4>
+  <h4 style="text-align: center;">Om meg</h4>
   <div class="image-container">
 
     <!-- Bilde av meg med en passende beskrivelse (alt-tekst) -->
@@ -52,7 +51,7 @@
 <!-- Seksjon som beskriver hva jeg lærer på skolen, relatert til både programmering og medieproduksjon -->
 <section id="skole"> </section>
 <section class="section skole">
-  <h4>Hva Vi Lærer På Skolen</h4>
+  <h4>Hva vi lærer på skolen</h4>
   <p>På skolen jobber vi med ulike prosjekter innen programmering, webutvikling og medieproduksjon. Dette inkluderer utvikling av nettsider, produksjon av digitale medier som videoer, og redigering av bilder. Vi lærer om flere forskjellige kodespråk, og så langt har vi fått en god innføring i HTML, CSS og JavaScript. HTML er det grunnleggende språket som blir brukt til å strukturere innholdet på nettsidene våre, slik som overskrifter, avsnitt og bilder. CSS lar meg kontrollere utseendet til nettsider, slik at vi kan tilpasse farger, fonter, layout og andre visuelle elementer for å gjøre sidene mer attraktive og brukervennlige.</p>
 </section>
 
@@ -92,16 +91,23 @@
   <img src="bilder/Screenshot 2024-11-07 at 23.32.48.png" alt="Skisse av nettside" style="max-width: 400px; max-height: 400px;">
 </section>
 
+<script src="./Javascript/tellsmåbokstaver.js"></script>
+
 <!-- Kontaktseksjon med min kontaktinformasjon -->
 <section id="Kontakt"> 
 <section class="section Kontakt meg">
-  <h4>Kontakt Meg</h4>
+  <h4>Kontakt meg</h4>
   <p>Du kan kontakte meg på følgende måter:</p>
   <ul>
     <li>Email: tobiashelgy@gmail.com</li>
     <li>Telefon: 400 53 047</li>
   </ul>
 </section>
+
+<h1>Tell små bokstaver</h1>
+<input type="text" id="tekstInput" placeholder="Skriv inn en tekst">
+<button onclick="tellSmåBokstaver()">Tell bokstaver</button>
+<p id="resultat"></p>
 
 </body>
 </html>
