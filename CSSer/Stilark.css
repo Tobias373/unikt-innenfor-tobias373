@@ -102,3 +102,28 @@ body {
     font-size: 1.2rem; /* Øker skriftstørrelsen */
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* To kolonner */
+  gap: 20px; /* Avstand mellom seksjoner */
+  margin: 20px; /* Litt plass rundt grid-containeren */
+}
+
+.section {
+  background-color: #f9f9f9; /* Lys bakgrunn for kontrast */
+  padding: 15px;
+  border: 1px solid #ccc; /* Lett kantlinje */
+  border-radius: 8px; /* Runde hjørner */
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Enkel kolonne på små skjermer */
+  }
+}

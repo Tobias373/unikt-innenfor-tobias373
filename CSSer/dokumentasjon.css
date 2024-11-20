@@ -1,0 +1,123 @@
+
+body {
+    font-family: Arial, sans-serif; /* Setter font for hele dokumentet */
+    color: #333; /* Tekstfarge */
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Grid-oppsett */
+  header {
+    text-align: center; /* Sentrerer tekstinnholdet */
+    padding: 20px; /* Indre margin for å gi luft rundt innhold */
+    border-radius: 8px; /* Runder hjørnene */
+    margin: 20px; /* Ytre margin for å skille det fra andre elementer */
+  }
+  
+  .section {
+    padding: 20px; /* Indre margin for luft */
+    border-radius: 8px; /* Runder hjørnene */
+    margin: 20px; /* Ytre margin for å skape mellomrom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Legger til en skygge for dybdeeffekt */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center; /* Sentraliserer tekst i footer */
+    padding: 10px; 
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  /* Responsiv layout */
+  @media screen and (max-width: 900px) {
+    body {
+      display: flex;
+      flex-direction: column; /* Bytter til kolonneoppsett på mindre skjermer */
+    }
+  }
+  
+  .section, header {
+    max-width: 1100px; /* Maks bredde på hovedinnhold */
+    margin: 20px auto; /* Sentraliserer innhold */
+  }
+  
+  body {
+    padding: 20px; /* Ekstra padding rundt hele dokumentet */
+  }
+  
+  /* Navbar stil */
+  .navbar {
+    background-color: #333333; /* Bakgrunnsfarge for navbar */
+    padding: 15px; /* Indre margin for å gi luft rundt innholdet */
+    position: fixed; /* Fester navbaren til toppen av skjermen */
+    top: 0; /* Sørger for at navbaren plasseres helt øverst */
+    left: 0; /* Sørger for at navbaren starter helt til venstre */
+    width: 100%; /* Gjør at navbaren strekker seg over hele skjermen */
+    border-radius: 0; /* Fjerner avrundede hjørner for en renere stil */
+    z-index: 1000; /* Holder navbaren foran andre elementer */
+  }
+  
+  
+  .navbar ul {
+    list-style: none; /* Fjerner punktmerking */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Sentraliserer lenkene horisontalt */
+    gap: 20px; /* Avstand mellom lenkene */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none; /* Fjerner understrek fra lenker */
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s; /* Gir animasjonseffekt ved hover */
+  }
+  
+  /* Hover-effekt for navbar-lenker */
+  .navbar a:hover {
+    background-color: #4da8da; /* bestemmer hvilken farge lenken vil bli ved hover effekt */
+    transform: scale(1.1); /* Forstørrer litt ved hover */
+  }
+  
+  /* Container for sentrert bilde */
+  .image-container {
+    display: grid;
+    place-items: center; /* Sentrerer bilde i container */
+    height: 100%; 
+  }
+  
+  /* Responsiv layout for små skjermer */
+  @media screen and (max-width: 900px) {
+    .navbar ul {
+      flex-direction: column; /* Bytter til vertikal navbar */
+      align-items: center; /* Sentraliserer elementer horisontalt */
+      gap: 10px; /* Reduserer avstand mellom lenker */
+    }
+  
+    .navbar a {
+      padding: 10px 20px; /* Justerer padding for bedre plassutnyttelse */
+      font-size: 1.2rem; /* Øker skriftstørrelsen */
+    }
+  }
+  
+  /* Stil for tilbake-knappen */
+.back-button {
+    background-color: #333333; /* Bakgrunnsfarge for knappen */
+    color: white; /* Tekstfarge */
+    padding: 10px 20px; /* Indre margin for knappestørrelse */
+    border: none; /* Fjern kantlinjer */
+    border-radius: 5px; /* Runde hjørner */
+    text-decoration: none; /* Fjern understrek */
+    font-weight: bold; /* Fet tekst */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Jevn hover-effekt */
+  }
+  
+  /* Hover-effekt for tilbake-knappen */
+  .back-button:hover {
+    background-color: #357ca5; /* Mørkere blå ved hover */
+    transform: scale(1.05); /* Liten forstørrelse ved hover */
+  }
+  
