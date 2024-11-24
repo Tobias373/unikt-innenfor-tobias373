@@ -121,3 +121,28 @@ body {
     transform: scale(1.05); /* Liten forstørrelse ved hover */
   }
   
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
+}
