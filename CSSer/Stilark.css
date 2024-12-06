@@ -127,7 +127,7 @@ body {
     grid-template-columns: 1fr; /* Enkel kolonne på små skjermer */
   }
 }
-.nav-link.active {
+.active {
   font-weight: bold;
   text-decoration: underline;
   color: #007BFF;
