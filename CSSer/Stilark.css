@@ -76,11 +76,8 @@ body {
   transition: background-color 0.3s, transform 0.2s; /* Gir animasjonseffekt ved hover */
 }
 
-/* Hover-effekt for navbar-lenker */
-.navbar a:hover {
-  background-color: #4da8da; /* bestemmer hvilken farge lenken vil bli ved hover effekt */
-  transform: scale(1.1); /* Forstørrer litt ved hover */
-}
+
+
 
 /* Container for sentrert bilde */
 .image-container {
@@ -127,10 +124,26 @@ body {
     grid-template-columns: 1fr; /* Enkel kolonne på små skjermer */
   }
 }
-.active {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #007BFF;
-  background-color: aqua;
+
+li {
+  float: left;
 }
 
+li a {
+  transition: all 0.2s;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+/* gjør at boksen på linken til siden du er på blir blå */
+li a:hover:not(.active) {
+  transition: all 0.2s; 
+  background-color: #5f7e83;
+}
+
+.active {
+  background-color: #7eb9c7;
+  font-size: clamp(12px, 3vw, 18px);
+}
