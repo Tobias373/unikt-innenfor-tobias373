@@ -115,12 +115,6 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease; /* Jevn hover-effekt */
   }
   
-  /* Hover-effekt for tilbake-knappen */
-  .back-button:hover {
-    background-color: #357ca5; /* Mørkere blå ved hover */
-    transform: scale(1.05); /* Liten forstørrelse ved hover */
-  }
-  
   body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
