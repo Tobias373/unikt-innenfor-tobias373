@@ -76,9 +76,6 @@ body {
   transition: background-color 0.3s, transform 0.2s; /* Gir animasjonseffekt ved hover */
 }
 
-
-
-
 /* Container for sentrert bilde */
 .image-container {
   display: grid;
