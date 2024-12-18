@@ -24,8 +24,9 @@
       <li><a href="./HTMLer/Ferdigheter.html" class="nav-link">Ferdigheter</a></li>
       <li><a href="./HTMLer/hobbyer.html" class="nav-link">Hobbyer</a></li>
       <li><a href="./HTMLer/Kontakt.html" class="nav-link">Kontakt Meg</a></li>
-      <li><a href="./english_webpage/index.html">English Page</a></li>
-      <li><a href="./HTMLer/Dokumentasjon.html">Dokumentasjon</a></li>
+      <li><a href="./english_webpage/index.html" class="nav-link">English Page</a></li>
+      <li><a href="./HTMLer/Dokumentasjon.html" class="nav-link">Dokumentasjon</a></li>
+      <li><a href="./HTMLer/snake.html" class="nav-link">snake(virker ikke enda)</a></li>
     </ul>
   </nav>
   
@@ -36,7 +37,7 @@
   <p>Elev ved Informasjonsteknologi og Medieproduksjon (IM), Amalie Skram Videregående Skole</p>
 </header>
 
-
+<main>
 <!-- Seksjon om meg, inkludert et bilde og en kort beskrivelse -->
  <section id="om"> </section>
 <section class="section om">
@@ -49,23 +50,6 @@
   <p>Jeg heter Tobias Helgøy og er en 16 år gammel elev på Amalie Skram Videregående Skole. Her går jeg på linjen for informasjonsteknologi og medieproduksjon, hvor jeg får muligheten til å utvikle ferdigheter innen teknologi. Gjennom ulike prosjekter og oppgaver har jeg lært mye om webutvikling, programmering, og digital design. Denne erfaringen har forberedt meg godt for en fremtidig karriere innen IT og media, og jeg ser frem til å bruke kunnskapen min i praktiske sammenhenger i arbeidslivet.</p>
 </section>
 
-<!-- Seksjon som beskriver hva jeg lærer på skolen, relatert til både programmering og medieproduksjon -->
-<section id="skole"> </section>
-<section class="section skole">
-  <h4>Hva vi lærer på skolen</h4>
-  <p>På skolen jobber vi med ulike prosjekter innen programmering, webutvikling og medieproduksjon. Dette inkluderer utvikling av nettsider, produksjon av digitale medier som videoer, og redigering av bilder. Vi lærer om flere forskjellige kodespråk, og så langt har vi fått en god innføring i HTML, CSS og JavaScript. HTML er det grunnleggende språket som blir brukt til å strukturere innholdet på nettsidene våre, slik som overskrifter, avsnitt og bilder. CSS lar meg kontrollere utseendet til nettsider, slik at vi kan tilpasse farger, fonter, layout og andre visuelle elementer for å gjøre sidene mer attraktive og brukervennlige.</p>
-</section>
-
-
-<!-- Seksjon som beskriver noen av mine hobbyer -->
-<section id="hobbyer"> </section>
-<section class="section hobbyer">
-  <h4>Hobbyer</h4>
-  <p>Jeg har flere hobbyer som inkluderer programmering og gaming. </p>
-  <p>Etter hvert som jeg utvikler ferdighetene mine, ønsker jeg å delta i flere prosjekter innen teknologi.</p>
-</section>
-
-
 <!-- Seksjon som viser en skisse som viser hvordan jeg tenkte at nettsiden ville se ut -->
 <section class="section prosjekter">
   <h4>Skisse </h4>
@@ -73,20 +57,27 @@
   <img src="bilder/skisse.png" alt="Skisse av nettside" style="max-width: 400px; max-height: 400px;">
 </section>
 
-<script src="./Javascript/tellsmåbokstaver.js"></script>
+<section class="section tabell-container">
+  <h4>Legg til data i en tabell</h4>
+  <div>
+    <input type="text" id="brukerInput" placeholder="Skriv inn data">
+    <button onclick="leggTilRad()">Legg til</button>
+  </div>
+  <table id="dataTabell">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rader legges til dynamisk her -->
+    </tbody>
+  </table>
+  <script src="./Javascript/tabel.js"></script>
 
-<h1>Tell små bokstaver</h1>
-<input type="text" id="tekstInput" placeholder="Skriv inn en tekst">
-<button onclick="tellSmåBokstaver()">Tell bokstaver</button>
-<p id="resultat"></p>
-
-<section class="section prosjekter"></section>
-  <h4>Spill</h4>
-  <p></p>
- 
 </section>
-
-
+</main>
 
 </body>
 </html>

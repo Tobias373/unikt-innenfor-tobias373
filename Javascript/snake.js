@@ -2,11 +2,11 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 // Spillvariabler  
-const boxSize = 215;
+const boxSize = 20; // Mindre rute-størrelse
 const rows = canvas.height / boxSize;
 const cols = canvas.width / boxSize;
 let snake = [{ x: 5, y: 5 }];
-let direction = { x: 0, y: 0 };
+let direction = { x: 1, y: 0 }; // Starter med å bevege seg til høyre
 let food = generateFood();
 let score = 0;
 
@@ -43,7 +43,7 @@ function generateFood() {
         isOnSnake = true;
       }
     });
-  } while (isOnSnake); // Gjenta til maten ikke er på slangen  
+  } while (isOnSnake);
   return newFood;
 }
 
@@ -71,7 +71,7 @@ function updateSnake() {
     score++;
     food = generateFood();
   } else {
-    snake.pop(); // Fjerner halen hvis mat ikke spises  
+    snake.pop();
   }
 }
 
@@ -82,14 +82,19 @@ function drawGame() {
   drawSnake();
 }
 
-// Spillslutt  
 function endGame() {
   alert(`Spillet er over! Poengsum: ${score}`);
-  snake = [{ x: 5, y: 5 }];
-  direction = { x: 0, y: 0 };
+  
+  // Nullstill variabler
+  snake = [{ x: Math.floor(cols / 2), y: Math.floor(rows / 2) }];
+  direction = { x: 1, y: 0 }; // Starter til høyre
   food = generateFood();
   score = 0;
+  
+  // Start spillloopen igjen
+  gameLoop();
 }
+
 
 // Styrer slangen  
 document.addEventListener('keydown', event => {
