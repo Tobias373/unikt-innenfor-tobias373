@@ -92,7 +92,6 @@ function endGame() {
   score = 0;
   
   // Start spillloopen igjen
-  gameLoop();
 }
 
 
