@@ -91,7 +91,6 @@ function endGame() {
   food = generateFood();
   score = 0;
   
-  // Start spillloopen igjen
 }
 
 
