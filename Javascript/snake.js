@@ -98,11 +98,14 @@ function endGame() {
 // Styrer slangen  
 document.addEventListener('keydown', event => {
   const { key } = event;
-  if (key === 'ArrowUp' && direction.y === 0) direction = { x: 0, y: -1 };
-  if (key === 'ArrowDown' && direction.y === 0) direction = { x: 0, y: 1 };
-  if (key === 'ArrowLeft' && direction.x === 0) direction = { x: -1, y: 0 };
-  if (key === 'ArrowRight' && direction.x === 0) direction = { x: 1, y: 0 };
+
+  // Pil-taster
+  if ((key === 'ArrowUp' || key === 'w') && direction.y === 0) direction = { x: 0, y: -1 };
+  if ((key === 'ArrowDown' || key === 's') && direction.y === 0) direction = { x: 0, y: 1 };
+  if ((key === 'ArrowLeft' || key === 'a') && direction.x === 0) direction = { x: -1, y: 0 };
+  if ((key === 'ArrowRight' || key === 'd') && direction.x === 0) direction = { x: 1, y: 0 };
 });
+
 
 // Spillloop  
 function gameLoop() {
