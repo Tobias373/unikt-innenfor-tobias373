@@ -8,4 +8,12 @@ body {
     }
     canvas {
       border: 1px solid #000;
-    }
+ }
+ 
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* To kolonner */
+    gap: 20px; /* Avstand mellom seksjoner */
+    margin: 20px; /* Litt plass rundt grid-containeren */
+  }
+  
