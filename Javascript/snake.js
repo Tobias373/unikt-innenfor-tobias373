@@ -83,7 +83,7 @@ function drawGame() {
 }
 
 function endGame() {
-  alert(`Spillet er over! Poengsum: ${score}`);
+  alert("Spillet er over! Poengsum: ${score}");
   
   // Nullstill variabler
   snake = [{ x: Math.floor(cols / 2), y: Math.floor(rows / 2) }];
