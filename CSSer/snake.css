@@ -5,6 +5,7 @@ body {
       height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
+      font-family: Arial, sans-serif; /* Setter font for hele dokumentet */
     }
     canvas {
       border: 1px solid #000;
@@ -17,3 +18,66 @@ body {
     margin: 20px; /* Litt plass rundt grid-containeren */
   }
   
+  /* Navbar stil */
+.navbar {
+  background-color: #333333; /* Bakgrunnsfarge for navbar */
+  padding: 15px; /* Indre margin for å gi luft rundt innholdet */
+  position: fixed; /* Fester navbaren til toppen av skjermen */
+  top: 0; /* Sørger for at navbaren plasseres helt øverst */
+  left: 0; /* Sørger for at navbaren starter helt til venstre */
+  width: 100%; /* Gjør at navbaren strekker seg over hele skjermen */
+  border-radius: 0; /* Fjerner avrundede hjørner for en renere stil */
+  z-index: 1000; /* Holder navbaren foran andre elementer */
+}
+
+
+.navbar ul {
+  list-style: none; /* Fjerner punktmerking */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Sentraliserer lenkene horisontalt */
+  gap: 20px; /* Avstand mellom lenkene */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none; /* Fjerner understrek fra lenker */
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s; /* Gir animasjonseffekt ved hover */
+}
+
+/* Responsiv layout for små skjermer */
+@media screen and (max-width: 900px) {
+  .navbar ul {
+    flex-direction: column; /* Bytter til vertikal navbar */
+    align-items: center; /* Sentraliserer elementer horisontalt */
+    gap: 10px; /* Reduserer avstand mellom lenker */
+  }
+
+  .navbar a {
+    padding: 10px 20px; /* Justerer padding for bedre plassutnyttelse */
+    font-size: 1.2rem; /* Øker skriftstørrelsen */
+  }
+}
+
+li a {
+  transition: all 0.2s;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+/* gjør at boksen på linken til siden du er på blir blå */
+li a:hover:not(.active) {
+  transition: all 0.2s; 
+  background-color: #5f7e83;
+}
+
+.active {
+  background-color: #7eb9c7;
+  font-size: clamp(12px, 3vw, 18px);
+}
+

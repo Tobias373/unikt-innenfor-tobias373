@@ -46,6 +46,10 @@ body {
   padding: 20px; /* Ekstra padding rundt hele dokumentet */
 }
 
+.section, main {
+
+
+}
 /* Navbar stil */
 .navbar {
   background-color: #333333; /* Bakgrunnsfarge for navbar */
@@ -144,3 +148,4 @@ li a:hover:not(.active) {
   background-color: #7eb9c7;
   font-size: clamp(12px, 3vw, 18px);
 }
+

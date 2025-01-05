@@ -18,7 +18,9 @@
   <!-- Navigasjonsmeny med lenker til forskjellige seksjoner på siden og en engelsk nettside -->
   <nav class="navbar">
     <ul>
-      <li><a href="#" class="active">Hjem</a></li>
+      <li><a href="#" class="active">Hjem</a></li> <!-- Hjem lenken, som er aktiv på denne siden -->
+      
+      <!-- Lenker til ulike HTML-sider på nettstedet -->
       <li><a href="./HTMLer/skole.html" class="nav-link">Skole</a></li>
       <li><a href="./HTMLer/Ferdigheter.html" class="nav-link">Ferdigheter</a></li>
       <li><a href="./HTMLer/Kontakt.html" class="nav-link">Kontakt Meg</a></li>
@@ -42,8 +44,7 @@
   <h4 style="text-align: center;">Om meg</h4>
   <div class="image-container">
 
-    <!-- Bilde av meg med en passende beskrivelse (alt-tekst) -->
-    <img src="bilder/Bilde_av_meg_forside.JPG" alt="Bilde av meg">
+    <img src="bilder/Bilde_av_meg_forside.JPG" alt="Bilde av meg">  <!-- Bilde av meg med en passende beskrivelse (alt-tekst) -->
   </div>
   <p>Jeg heter Tobias Helgøy og er en 16 år gammel elev på Amalie Skram Videregående Skole. Her går jeg på linjen for informasjonsteknologi og medieproduksjon, hvor jeg får muligheten til å utvikle ferdigheter innen teknologi. Gjennom ulike prosjekter og oppgaver har jeg lært mye om webutvikling, programmering, og digital design. Denne erfaringen har forberedt meg godt for en fremtidig karriere innen IT og media, og jeg ser frem til å bruke kunnskapen min i praktiske sammenhenger i arbeidslivet.</p>
 </section>
@@ -64,6 +65,33 @@
   <script src="./Javascript/tabel.js"></script>
 
 </section>
+
+<!-- seksjon for "velkommen javascript funksjon"-->
+<section class="section Velkommen">
+  <h4>Velkommen</h4>
+  <div>
+    <label for="nameInput">Skriv inn navnet ditt:</label>
+    <input type="text" id="nameInput" placeholder="Ditt navn" />
+    <button onclick="greetUser()">Send</button>
+  </div>
+  <div id="welcomeMessage"></div>
+
+  <script src="./Javascript/Velkommen.js"></script>
+
+</section>
+
+<!-- seksjon for "Tell små bokstaver funksjon"-->
+<section class="section tellSmåBokstaver">
+  <h4>tell små bokstaver</h4>
+
+  <label for="tekstInput">Trykk her for å skrive en tekst:</label>
+  <button onclick="tellSmåBokstaver()">Tell små bokstaver</button>
+</div>
+<div id="resultat"></div>
+  <script src="./Javascript/tellsmåbokstaver.js"></script>
+  
+</section>
+  
 </main>
 
 </body>
