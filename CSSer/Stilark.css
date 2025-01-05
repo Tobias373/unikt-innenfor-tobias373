@@ -1,9 +1,9 @@
-
 body {
   font-family: Arial, sans-serif; /* Setter font for hele dokumentet */
   color: #333; /* Tekstfarge */
-  margin: 0;
-  background-color: #f9f9f9;
+  margin: 0; /* Fjerner standardmargin */
+  background-color: #f9f9f9; /* Setter bakgrunnsfarge */
+  padding: 20px; /* Ekstra padding rundt hele dokumentet */
 }
 
 /* Grid-oppsett */
@@ -24,9 +24,9 @@ header {
 /* Footer */
 footer {
   text-align: center; /* Sentraliserer tekst i footer */
-  padding: 10px; 
-  border-radius: 8px;
-  margin: 20px;
+  padding: 10px; /* Indre margin */
+  border-radius: 8px; /* Runde hjørner */
+  margin: 20px; /* Ytre margin */
 }
 
 /* Responsiv layout */
@@ -42,14 +42,6 @@ footer {
   margin: 20px auto; /* Sentraliserer innhold */
 }
 
-body {
-  padding: 20px; /* Ekstra padding rundt hele dokumentet */
-}
-
-.section, main {
-
-
-}
 /* Navbar stil */
 .navbar {
   background-color: #333333; /* Bakgrunnsfarge for navbar */
@@ -62,7 +54,6 @@ body {
   z-index: 1000; /* Holder navbaren foran andre elementer */
 }
 
-
 .navbar ul {
   list-style: none; /* Fjerner punktmerking */
   padding: 0;
@@ -73,10 +64,10 @@ body {
 }
 
 .navbar a {
-  color: white;
+  color: white; /* Tekstfarge på lenkene */
   text-decoration: none; /* Fjerner understrek fra lenker */
-  padding: 8px 15px;
-  border-radius: 4px;
+  padding: 8px 15px; /* Indre margin på lenkene */
+  border-radius: 4px; /* Runde hjørner på lenkene */
   transition: background-color 0.3s, transform 0.2s; /* Gir animasjonseffekt ved hover */
 }
 
@@ -84,7 +75,7 @@ body {
 .image-container {
   display: grid;
   place-items: center; /* Sentrerer bilde i container */
-  height: 100%; 
+  height: 100%; /* Full høyde */
 }
 
 /* Responsiv layout for små skjermer */
@@ -102,22 +93,22 @@ body {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* To kolonner */
+  display: grid; /* Setter opp et grid */
+  grid-template-columns: repeat(2, 1fr); /* To kolonner med like bredde */
   gap: 20px; /* Avstand mellom seksjoner */
   margin: 20px; /* Litt plass rundt grid-containeren */
 }
 
 .section {
   background-color: #f9f9f9; /* Lys bakgrunn for kontrast */
-  padding: 15px;
+  padding: 15px; /* Indre margin */
   border: 1px solid #ccc; /* Lett kantlinje */
   border-radius: 8px; /* Runde hjørner */
 }
 
 .section img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Gjør bildet responsivt */
+  height: auto; /* Bevarer bildets proporsjoner */
 }
 
 @media (max-width: 768px) {
@@ -127,25 +118,25 @@ body {
 }
 
 li {
-  float: left;
+  float: left; /* Flyter elementet til venstre */
 }
 
 li a {
-  transition: all 0.2s;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 8px 10px;
-  text-decoration: none;
+  transition: all 0.2s; /* Glatt overgang for hover-effekter */
+  display: block; /* Gjør lenkene blokkbaserte */
+  color: black; /* Tekstfarge */
+  text-align: center; /* Sentrerer tekst i blokken */
+  padding: 8px 10px; /* Indre margin */
+  text-decoration: none; /* Fjerner understrek */
 }
-/* gjør at boksen på linken til siden du er på blir blå */
+
+/* Gjør at boksen på linken til siden du er på blir blå */
 li a:hover:not(.active) {
-  transition: all 0.2s; 
-  background-color: #5f7e83;
+  transition: all 0.2s; /* Glatt overgang ved hover */
+  background-color: #5f7e83; /* Bakgrunnsfarge ved hover */
 }
 
 .active {
-  background-color: #7eb9c7;
-  font-size: clamp(12px, 3vw, 18px);
+  background-color: #7eb9c7; /* Bakgrunnsfarge for aktiv lenke */
+  font-size: clamp(12px, 3vw, 18px); /* Responsiv skriftstørrelse */
 }
-
