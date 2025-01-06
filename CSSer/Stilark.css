@@ -62,7 +62,6 @@ body {
   z-index: 1000; /* Holder navbaren foran andre elementer */
 }
 
-
 .navbar ul {
   list-style: none; /* Fjerner punktmerking */
   padding: 0;
