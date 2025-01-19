@@ -1,0 +1,22 @@
+# Ignorer systemfiler
+.DS_Store
+
+# Ignorer mappe for Visual Studio Code-konfigurasjon
+.vscode/
+
+# Ignorer node_modules-mappen (for Node.js-prosjekter)
+node_modules/
+
+# Ignorer loggfiler
+*.log
+
+# Ignorer cache-filer
+.cache/
+
+# Ignorer byggemapper
+dist/
+
+# Ignorer personlige filer og mapper
+*.mp3
+*.jpeg
+Downloads/

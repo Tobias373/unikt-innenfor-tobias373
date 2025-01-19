@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <!-- Angir tegnkoding som UTF-8 for å støtte et bredt spekter av tegn -->
+  <meta charset="utf-8">
+  
+  <!-- Sørger for at siden skaleres riktig på ulike enheter, for tilpassning til forskjellige skjermstørrelser -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Setter tittelen på nettsiden som vises i nettleserens fane -->
+  <title>Min nettside</title>
+  
+  <!-- Knytter et eksternt stilark (CSS) som definerer hvordan HTML-elementene skal styles -->
+  <link rel="stylesheet" href="./CSSer/Stilark.css">
+</head>
+<body>
+  
+  <!-- Navigasjonsmeny med lenker til forskjellige seksjoner på siden og en engelsk nettside -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" class="active">Hjem</a></li> <!-- Hjem lenken, som er aktiv på denne siden -->
+      
+      <!-- Lenker til ulike HTML-sider på nettstedet -->
+      <li><a href="./HTMLer/skole.html" class="nav-link">Skole</a></li>
+      <li><a href="./HTMLer/Ferdigheter.html" class="nav-link">Ferdigheter</a></li>
+      <li><a href="./HTMLer/Kontakt.html" class="nav-link">Kontakt Meg</a></li>
+      <li><a href="./english_webpage/index.html" class="nav-link">English Page</a></li>
+      <li><a href="./HTMLer/Dokumentasjon.html" class="nav-link">Dokumentasjon</a></li>
+      <li><a href="./HTMLer/snake.html" class="nav-link">snake</a></li>
+      <li><a href="../../tverrfaglig/tverrfaglig nettside/tverrfaglig.html">Bærekraft</a></li>
+    </ul>
+  </nav>
+  
+<header>
+  <!-- Hovedtittel og introduksjon til nettsiden -->
+  <h2>Velkommen til nettsiden min!</h2>
+  <h3>Tobias Helgøy</h3>
+  <p>Elev ved Informasjonsteknologi og Medieproduksjon (IM), Amalie Skram Videregående Skole</p>
+</header>
+
+<main>
+<!-- Seksjon om meg, inkludert et bilde og en kort beskrivelse -->
+ <section id="om"> </section>
+<section class="section om">
+  <h4 style="text-align: center;">Om meg</h4>
+  <div class="image-container">
+
+    <img src="bilder/Bilde_av_meg_forside.JPG" alt="Bilde av meg">  <!-- Bilde av meg med en passende beskrivelse (alt-tekst) -->
+  </div>
+  <p>Jeg heter Tobias Helgøy og er en 16 år gammel elev på Amalie Skram Videregående Skole. Her går jeg på linjen for informasjonsteknologi og medieproduksjon, hvor jeg får muligheten til å utvikle ferdigheter innen teknologi. Gjennom ulike prosjekter og oppgaver har jeg lært mye om webutvikling, programmering, og digital design. Denne erfaringen har forberedt meg godt for en fremtidig karriere innen IT og media, og jeg ser frem til å bruke kunnskapen min i praktiske sammenhenger i arbeidslivet.</p>
+</section>
+
+<section class="section tabell-container">
+  <h4>Legg til data i en tabell</h4>
+  <div>
+    <input type="text" id="brukerInput" placeholder="Skriv inn data">
+    <button onclick="leggTilRad()">Legg til</button>
+  </div>
+  <table id="dataTabell">
+    <thead>
+    </thead>
+    <tbody>
+      <!-- Rader legges til dynamisk her -->
+    </tbody>
+  </table>
+  <script src="./Javascript/tabel.js"></script>
+
+</section>
+
+<!-- seksjon for "velkommen javascript funksjon"-->
+<section class="section Velkommen">
+  <h4>Velkommen</h4>
+  <div>
+    <label for="nameInput">Skriv inn navnet ditt:</label>
+    <input type="text" id="nameInput" placeholder="Ditt navn" />
+    <button onclick="greetUser()">Send</button>
+  </div>
+  <div id="welcomeMessage"></div>
+
+  <script src="./Javascript/Velkommen.js"></script>
+
+</section>
+
+<!-- seksjon for "Tell små bokstaver funksjon"-->
+<section class="section tellSmåBokstaver">
+  <h4>Tell små bokstaver</h4>
+
+  <label for="tekstInput">Trykk her for å skrive en tekst:</label>
+  <button onclick="tellSmåBokstaver()">Tell små bokstaver</button>
+</div>
+<div id="resultat"></div>
+  <script src="./Javascript/tellsmåbokstaver.js"></script>
+  
+</section>
+  
+</main>
+
+</body>
+</html>
