@@ -269,3 +269,26 @@ transition: 1s;
     background: red;
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 }
+.projects {
+    text-align: center;
+    padding: 40px;
+}
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.project-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+}
+.project-item img {
+    width: 100%;
+    border-radius: 5px;
+}
