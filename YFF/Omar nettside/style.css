@@ -269,18 +269,18 @@ transition: 1s;
     background: red;
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 }
-.projects {
+.oppdrag {
     text-align: center;
     padding: 40px;
 }
-.project-grid {
+.oppdrag-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
 }
-.project-item {
+.oppdrag-item {
     background: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
@@ -288,7 +288,7 @@ transition: 1s;
     width: 250px;
     text-align: center;
 }
-.project-item img {
+.oppdrag-item img {
     width: 100%;
     border-radius: 5px;
 }
