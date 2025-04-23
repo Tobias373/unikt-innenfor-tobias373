@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JavaScript/js.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Omar</h1>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Hjem</a></li>
+            <li><a href="page2.html">Kontakt</a></li>
+            <li>
+                <a href="#">Mer</a>
+                <ul class="dropdown">
+                    <li><a href="page3.html">Priser</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <section class="content">
+            <article class="flexbox">
+                <form id="skjema">
+                    <label for="text">Fornavn:</label>
+                    <!-- placeholder er det som skal vises inni inputen når det ikke er noe der -->
+                    <input type="text" id="tekst" placeholder="Fornavn">
+
+                    <label for="text">Etternavn:</label>
+                    <input type="text" id="tekst" placeholder="Etternavn">
+                
+                    <label for="epost">Epost:</label>
+                    <input type="email" id="epost" placeholder="Epost">
+                
+                    <button type="submit">Send</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <div class="bilde">
+        <img class="bildeAvOmar" src="path/to/image.jpg" alt="Image of Omar">
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Omar. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
