@@ -68,4 +68,5 @@ async function register() {
   }
   
   window.onload = hentAlleKommentarer;
+
   

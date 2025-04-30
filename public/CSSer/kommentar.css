@@ -1,0 +1,92 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+#response-msg {
+  margin-top: 10px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+#alle-kommentarer {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#alle-kommentarer p {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  input, textarea, button {
+    max-width: 100%;
+  }
+}
+
