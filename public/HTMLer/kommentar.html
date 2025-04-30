@@ -5,6 +5,23 @@
   <title>Kommentarfelt</title>
 </head>
 <body>
+
+    <h1>Velkommen til nettsiden 🔐</h1>
+
+<h2>Registrer deg</h2>
+<input type="text" id="reg-user" placeholder="Brukernavn">
+<input type="password" id="reg-pass" placeholder="Passord">
+<button onclick="register()">Registrer</button>
+
+<h2>Logg inn</h2>
+<input type="text" id="login-user" placeholder="Brukernavn">
+<input type="password" id="login-pass" placeholder="Passord">
+<button onclick="login()">Logg inn</button>
+
+<p id="response-msg"></p>
+
+<script src="script.js"></script>
+
   <h1>Kommentarfelt 💬</h1>
 
   <textarea id="kommentar" placeholder="Skriv en kommentar..."></textarea>
@@ -14,6 +31,8 @@
   <h2>Alle kommentarer</h2>
   <div id="alle-kommentarer"></div>
 
-  <script src="kommentar.js"></script>
+  <script src="comments.js"></script>
+
+  <script src="../script.js"></script>
 </body>
 </html>

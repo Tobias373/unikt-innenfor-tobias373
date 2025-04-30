@@ -1,32 +1,23 @@
-// database.js
 const sqlite3 = require("sqlite3").verbose();
-const path = require("path");
 
-// DB-fil lagres i rotmappa som "database.db"
-const db = new sqlite3.Database(path.resolve(__dirname, "database.db"), (err) => {
+// Opprett en databasefil (hvis den ikke finnes)
+const db = new sqlite3.Database("./users.db", (err) => {
   if (err) {
-    console.error("Kunne ikke koble til database:", err.message);
+    console.error("Feil ved tilkobling til SQLite:", err.message);
   } else {
-    console.log("Kobla til SQLite-database ✅");
+    console.log("Tilkoblet til SQLite-databasen.");
   }
 });
 
-// Oppretter tabeller hvis de ikke finnes
+// Opprett en tabell for brukere (hvis den ikke finnes)
 db.serialize(() => {
-  db.run(`CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL
-  )`);
-
-  db.run(`CREATE TABLE IF NOT EXISTS comments (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER NOT NULL,
-    content TEXT NOT NULL,
-    parent_id INTEGER,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY(user_id) REFERENCES users(id)
-  )`);
+  db.run(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      username TEXT UNIQUE NOT NULL,
+      password TEXT NOT NULL
+    )
+  `);
 });
 
 module.exports = db;
