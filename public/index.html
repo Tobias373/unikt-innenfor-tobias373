@@ -11,11 +11,11 @@
   <nav class="navbar">
     <ul>
       <li><a href="#" class="active">Hjem</a></li>
-      <li><a href="./HTMLer/skole.html" class="nav-link">Skole</a></li>
       <li><a href="./HTMLer/Ferdigheter.html" class="nav-link">Ferdigheter</a></li>
       <li><a href="./HTMLer/Kontakt.html" class="nav-link">Kontakt Meg</a></li>
       <li><a href="./HTMLer/Dokumentasjon.html" class="nav-link">Dokumentasjon</a></li>
       <li><a href="./HTMLer/snake.html" class="nav-link">snake</a></li>
+      <li><a href="./HTMLer/kommentar.html" class="nav-link">kommentarfunksjon</a></li>
     </ul>
   </nav>
 
@@ -37,10 +37,32 @@
   </section>
 
 
-
+  <section class="section generelt">
+    <h4 style="text-align: center;">Generelt</h4>
+    <div>
+  
+    </div>
+    <p>På skolen jobber vi med ulike prosjekter innen programmering, webutvikling og medieproduksjon. Dette inkluderer utvikling av nettsider, produksjon av digitale medier som videoer, og redigering av bilder. Vi lærer om flere forskjellige kodespråk, og så langt har vi fått en god innføring i HTML, CSS og JavaScript. HTML er det grunnleggende språket som blir brukt til å strukturere innholdet på nettsidene våre, slik som overskrifter, avsnitt og bilder. CSS lar meg kontrollere utseendet til nettsider, slik at vi kan tilpasse farger, fonter, layout og andre visuelle elementer for å gjøre sidene mer attraktive og brukervennlige.</p>
+  </section>
 
 </main>
 
+
+<h1>Velkommen til nettsiden 🔐</h1>
+
+<h2>Registrer deg</h2>
+<input type="text" id="reg-user" placeholder="Brukernavn">
+<input type="password" id="reg-pass" placeholder="Passord">
+<button onclick="register()">Registrer</button>
+
+<h2>Logg inn</h2>
+<input type="text" id="login-user" placeholder="Brukernavn">
+<input type="password" id="login-pass" placeholder="Passord">
+<button onclick="login()">Logg inn</button>
+
+<p id="response-msg"></p>
+
+<script src="script.js"></script>
 
 </body>
 </html>

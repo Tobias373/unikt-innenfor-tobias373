@@ -1,44 +1,58 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
+const session = require("express-session");
+const bodyParser = require("body-parser");
+const path = require("path");
+const db = require("./database");
+const comments = require("./comments");
 
 const app = express();
-const users = {}; // fake brukerdatabase
-const saltRounds = 10;
+const PORT = 3000;
 
+app.use(express.static("public"));
 app.use(bodyParser.json());
-app.use(express.static("public")); // her ligger index.html og sånt
+
+app.use(session({
+  secret: "hemmeligkode123",
+  resave: false,
+  saveUninitialized: true
+}));
 
 // Registrering
 app.post("/register", async (req, res) => {
   const { username, password } = req.body;
-
-  if (users[username]) {
-    return res.status(400).json({ msg: "Brukernavn finnes allerede" });
-  }
-
-  const hashed = await bcrypt.hash(password, saltRounds);
-  users[username] = hashed;
-
-  res.json({ msg: "Bruker opprettet ✅" });
+  const hashed = await bcrypt.hash(password, 10);
+  db.run("INSERT INTO users (username, password) VALUES (?, ?)", [username, hashed], (err) => {
+    if (err) return res.json({ msg: "Brukernavn finnes", success: false });
+    res.json({ msg: "Registrert!", success: true });
+  });
 });
 
 // Login
-app.post("/login", async (req, res) => {
+app.post("/login", (req, res) => {
   const { username, password } = req.body;
+  db.get("SELECT * FROM users WHERE username = ?", [username], async (err, user) => {
+    if (err || !user) return res.json({ msg: "Feil brukernavn", success: false });
 
-  const hashed = users[username];
-  if (!hashed) return res.json({ success: false, msg: "Feil brukernavn" });
+    const correct = await bcrypt.compare(password, user.password);
+    if (!correct) return res.json({ msg: "Feil passord", success: false });
 
-  const match = await bcrypt.compare(password, hashed);
-  if (match) {
-    res.json({ success: true, msg: "Innlogging vellykket 🔐" });
-  } else {
-    res.json({ success: false, msg: "Feil passord" });
-  }
+    req.session.user = { id: user.id, username: user.username };
+    res.json({ msg: "Logget inn", success: true });
+  });
 });
 
-// Start server
-app.listen(3000, () => {
-  console.log("Server kjører på http://localhost:3000 🚀");
+// Legg til kommentar
+app.post("/comments", (req, res) => {
+  if (!req.session.user) return res.status(401).json({ msg: "Ikke innlogget" });
+
+  const { content, parent_id } = req.body;
+  comments.addComment(db, req.session.user.id, content, parent_id, res);
 });
+
+// Hent kommentarer
+app.get("/comments", (req, res) => {
+  comments.getComments(db, res);
+});
+
+app.listen(PORT, () => console.log(`Server kjører på http://localhost:${PORT}`));
