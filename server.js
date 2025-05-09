@@ -16,6 +16,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+http://localhost:3000
 
 // Opprett tabeller hvis de ikke finnes
 db.run(`CREATE TABLE IF NOT EXISTS users (
@@ -73,6 +74,19 @@ app.post("/kommentar", (req, res) => {
 // Hent kommentarer
 app.get("/kommentar", (req, res) => {
   getComments(db, res);
+});
+
+app.use(cors()); // lar frontend hente data
+
+app.get('/brukere', (req, res) => {
+  db.all('SELECT * FROM users', [], (err, rows) => {
+    if (err) {
+      console.error(err.message);
+      res.status(500).json({ error: 'Noe gikk galt 😬' });
+    } else {
+      res.json(rows);
+    }
+  });
 });
 
 // Start server
