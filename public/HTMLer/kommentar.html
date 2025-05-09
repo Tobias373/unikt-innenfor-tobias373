@@ -49,25 +49,6 @@
 
   <script src="../script.js"></script>
 
-  <h1>Brukere i databasen</h1>
-  <div id="brukerListe">Laster...</div>
-
-  <script>
-    fetch('http://localhost:3000/brukere')
-      .then(res => res.json())
-      .then(data => {
-        const div = document.getElementById('brukerListe');
-        div.innerHTML = '';
-        data.forEach(bruker => {
-          const el = document.createElement('p');
-          el.textContent = `ID: ${bruker.id} | Navn: ${bruker.navn} | E-post: ${bruker.epost}`;
-          div.appendChild(el);
-        });
-      })
-      .catch(err => {
-        document.getElementById('brukerListe').innerText = 'Kunne ikke laste brukere 😢';
-      });
-    </script>
 
 </body>
 </html>

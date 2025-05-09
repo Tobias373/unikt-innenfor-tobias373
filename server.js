@@ -76,18 +76,6 @@ app.get("/kommentar", (req, res) => {
   getComments(db, res);
 });
 
-app.use(cors()); // lar frontend hente data
-
-app.get('/brukere', (req, res) => {
-  db.all('SELECT * FROM users', [], (err, rows) => {
-    if (err) {
-      console.error(err.message);
-      res.status(500).json({ error: 'Noe gikk galt 😬' });
-    } else {
-      res.json(rows);
-    }
-  });
-});
 
 // Start server
 app.listen(3000, () => console.log("Server kjører på http://localhost:3000"));
