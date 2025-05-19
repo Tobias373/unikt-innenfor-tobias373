@@ -142,3 +142,17 @@ li a:hover:not(.active) {
   background-color: #7eb9c7;
   font-size: clamp(12px, 3vw, 18px);
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+  gap: 10px; /* Avstand mellom bildene */
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: avrundede hjørner */
+  object-fit: cover;
+}

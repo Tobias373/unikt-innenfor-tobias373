@@ -1,17 +1,24 @@
 // REGISTRERING
 async function register() {
-    const username = document.getElementById("reg-user").value;
-    const password = document.getElementById("reg-pass").value;
-  
-    const res = await fetch("/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password })
-    });
-  
-    const data = await res.json();
-    document.getElementById("response-msg").textContent = data.msg;
+  const username = document.getElementById("reg-user").value;
+  const password = document.getElementById("reg-pass").value;
+
+  // 🔐 Sjekk om passordet er minst 8 tegn
+  if (password.length < 8) {
+    document.getElementById("response-msg").textContent = "Passordet må være minst 8 tegn langt!";
+    return; // Stopper funksjonen her
   }
+
+  const res = await fetch("/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+
+  const data = await res.json();
+  document.getElementById("response-msg").textContent = data.msg;
+}
+
   
   // LOGIN
   async function login() {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STILARK.CSS">
+    
+</head>
+<body>
+
+
+</section>
+<script>
+
+function fetchUsers() {
+      fetch('/Kunde')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Nettverksfeil');
+          }
+          return response.json();
+        })
+        .then(data => {
+          displayUsers(data.Kunde);
+        })
+        .catch(error => {
+          console.error('Feil ved henting av brukere:', error);
+          document.getElementById('user-list').innerHTML = 
+            '<tr><td colspan="2">Kunne ikke hente brukere. Vennligst prøv igjen senere.</td></tr>';
+        });
+    }
+
+
+// Funksjon for å vise brukere i tabellen
+function displayUsers(Kunne) {
+  const userList = document.getElementById('user-list');
+  
+  if (users.length === 0) {
+    userList.innerHTML = '<tr><td colspan="2">Ingen brukere er registrert ennå.</td></tr>';
+    return;
+  }
+
+  // Lag HTML for hver bruker
+  const usersHTML = users.map(user => `
+    <tr>
+      <td>${user.id}</td>
+      <td>${user.username}</td>
+    </tr>
+  `).join('');
+  
+  userList.innerHTML = usersHTML;
+}
+</script>
+</body>
+</html>

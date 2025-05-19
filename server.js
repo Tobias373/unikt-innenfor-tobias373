@@ -65,7 +65,7 @@ app.post("/kommentar", (req, res) => {
   const user = req.session.user;
   const content = req.body.content;
 
-  if (!user) return res.status(401).json({ msg: "Du må være logga inn" });
+  if (!user) return res.status(401).json({ msg: "Du må være logget inn" });
   if (!content || !content.trim()) return res.status(400).json({ msg: "Kommentaren er tom" });
 
   addComment(db, user.id, content, null, res);

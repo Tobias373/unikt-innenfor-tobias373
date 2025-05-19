@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrerte brukere</title>
+  <link rel="stylesheet" href="../CSSer/Stilark.css">
+  <style>
+    .user-table {
+      width: 80%;
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+    .user-table th, .user-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .user-table th {
+      background-color: #f2f2f2;
+    }
+    .user-table tr:hover {
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">Hjem</a></li>
+      <li><a href="./Ferdigheter.html" class="nav-link">Ferdigheter/kontakt</a></li>
+      <li><a href="./snake.html" class="nav-link">snake</a></li>
+      <li><a href="./kommentar.html" class="nav-link">kommentarfunksjon</a></li>
+      <li><a href="./omar.html" class="nav-link">YFF prosjekt</a></li>
+      <li><a href="./skygger over skogen.html" class="nav-link">interaktiv historie</a></li>
+      <li><a href="./brukere.html" class="nav-link active">Brukere</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Registrerte brukere</h2>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Brukernavn</th>
+        </tr>
+      </thead>
+      <tbody id="user-list">
+        <!-- Brukere vil bli lagt til her med JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Hent brukere når siden lastes
+    document.addEventListener('DOMContentLoaded', fetchUsers);
+
+    // Funksjon for å hente brukere fra serveren
+    function fetchUsers() {
+      fetch('/users')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Nettverksfeil');
+          }
+          return response.json();
+        })
+        .then(data => {
+          displayUsers(data.users);
+        })
+        .catch(error => {
+          console.error('Feil ved henting av brukere:', error);
+          document.getElementById('user-list').innerHTML = 
+            '<tr><td colspan="2">Kunne ikke hente brukere. Vennligst prøv igjen senere.</td></tr>';
+        });
+    }
+
+    // Funksjon for å vise brukere i tabellen
+    function displayUsers(users) {
+      const userList = document.getElementById('user-list');
+      
+      if (users.length === 0) {
+        userList.innerHTML = '<tr><td colspan="2">Ingen brukere er registrert ennå.</td></tr>';
+        return;
+      }
+
+      // Lag HTML for hver bruker
+      const usersHTML = users.map(user => `
+        <tr>
+          <td>${user.id}</td>
+          <td>${user.username}</td>
+        </tr>
+      `).join('');
+      
+      userList.innerHTML = usersHTML;
+    }
+  </script>
+</body>
+</html>
